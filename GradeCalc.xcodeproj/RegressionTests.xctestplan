@@ -1,0 +1,33 @@
+{
+  "configurations" : [
+    {
+      "id" : "DE8C172A-8B99-4250-87A9-821BBA7FBE77",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : false,
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:GradeCalc.xcodeproj",
+      "identifier" : "377D7DBD2415959000CD6582",
+      "name" : "GradeCalc"
+    }
+  },
+  "testTargets" : [
+    {
+      "skippedTests" : [
+        "GradeCalcUITestsLaunchTests",
+        "RegressionTest"
+      ],
+      "target" : {
+        "containerPath" : "container:GradeCalc.xcodeproj",
+        "identifier" : "7C250D5A29D5F2DD0082D065",
+        "name" : "GradeCalcUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

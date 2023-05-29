@@ -1,0 +1,40 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+#before_all do
+#  app = xcuitest_app
+#  app.set_hardware_keyboard_disabled(true)
+#end
+
+desc "Run XCUITests"
+lane :xcuitests do
+scan(
+  scheme: "GradeCalc",
+  devices: ["iPhone 14", "iPhone 14 Pro"],
+  result_bundle: true,
+  clean: true,
+  derived_data_path: "build",
+  code_coverage: true,
+  output_directory: "test_output",
+  reset_simulator: true,
+  disable_slide_to_type: true,
+  output_types: "html",
+  parallel_testing: true,
+  concurrent_workers: 2,
+  number_of_retries: 3
+)
+end
